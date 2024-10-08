@@ -1,20 +1,28 @@
 extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var medbay = true
+var hallway = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+
+
+func _process(delta):
+	if medbay:
+		%Medbay_doorway.visible = true
+		%Medbay.visible = true
+	else:
+		%Medbay_doorway.visible = false
+		%Medbay.visible = true
+		pass
+	if hallway:
+		%Hallway.visible = true
+	else:
+		%Hallway.visible = false
+
 
 
 func _on_doorway_button_down() -> void:
-	%Maxresdefault.visible = true
 	
-	print("you left")
-	
-	
-	pass # Replace with function body.
+	medbay = false
+	hallway = true

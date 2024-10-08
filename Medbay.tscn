@@ -7,20 +7,14 @@
 [node name="Spaceship" type="Node2D"]
 script = ExtResource("1_i1mtc")
 
-[node name="Ai-generated-spaceship-hospital-ward-of-the-future-neural-network-ai-generated-photo" type="Sprite2D" parent="."]
+[node name="Medbay" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(576, 324)
 scale = Vector2(0.783674, 0.661225)
 texture = ExtResource("2_1cfvj")
 
-[node name="Maxresdefault" type="Sprite2D" parent="."]
+[node name="Medbay_doorway" type="Button" parent="."]
 unique_name_in_owner = true
-visible = false
-position = Vector2(576, 324)
-scale = Vector2(0.9, 0.9)
-texture = ExtResource("3_supm3")
-
-[node name="Doorway" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,4 +30,10 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
-[connection signal="button_down" from="Doorway" to="." method="_on_doorway_button_down"]
+[node name="Hallway" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(576, 324)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_supm3")
+
+[connection signal="button_down" from="Medbay_doorway" to="." method="_on_doorway_button_down"]
