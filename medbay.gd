@@ -17,12 +17,15 @@ func _process(delta):
 		pass
 	if hallway:
 		%Hallway.visible = true
+		%Hallway_goback.visible = true
 	else:
 		%Hallway.visible = false
+		%Hallway_goback.visible = false
 
+func _on_hallway_goback_pressed() -> void:
+	hallway = false
+	medbay = true
 
-
-func _on_doorway_button_down() -> void:
-	
+func _on_medbay_doorway_pressed() -> void:
 	medbay = false
 	hallway = true
