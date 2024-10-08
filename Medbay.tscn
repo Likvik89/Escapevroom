@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bydsmp01jop3i"]
+
+[ext_resource type="Script" path="res://medbay.gd" id="1_i1mtc"]
+[ext_resource type="Texture2D" uid="uid://crywq8ngde1rm" path="res://ai-generated-spaceship-hospital-ward-of-the-future-neural-network-ai-generated-photo.jpg" id="2_1cfvj"]
+[ext_resource type="Texture2D" uid="uid://cr4f6ws7f6nka" path="res://maxresdefault.jpg" id="3_supm3"]
+
+[node name="Spaceship" type="Node2D"]
+script = ExtResource("1_i1mtc")
+
+[node name="Ai-generated-spaceship-hospital-ward-of-the-future-neural-network-ai-generated-photo" type="Sprite2D" parent="."]
+position = Vector2(485, 280)
+texture = ExtResource("2_1cfvj")
+
+[node name="Maxresdefault" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(589, 345)
+texture = ExtResource("3_supm3")
+
+[node name="Doorway" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 531.0
+offset_top = 184.0
+offset_right = 821.0
+offset_bottom = 497.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[connection signal="button_down" from="Doorway" to="." method="_on_doorway_button_down"]
