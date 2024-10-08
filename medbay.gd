@@ -12,6 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_doorway_button_down() -> void:
+	%Maxresdefault.visible = true
+	
 	print("you left")
 	
 	

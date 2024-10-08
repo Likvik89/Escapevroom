@@ -8,12 +8,16 @@
 script = ExtResource("1_i1mtc")
 
 [node name="Ai-generated-spaceship-hospital-ward-of-the-future-neural-network-ai-generated-photo" type="Sprite2D" parent="."]
-position = Vector2(485, 280)
+unique_name_in_owner = true
+position = Vector2(576, 324)
+scale = Vector2(0.783674, 0.661225)
 texture = ExtResource("2_1cfvj")
 
 [node name="Maxresdefault" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 visible = false
-position = Vector2(589, 345)
+position = Vector2(576, 324)
+scale = Vector2(0.9, 0.9)
 texture = ExtResource("3_supm3")
 
 [node name="Doorway" type="Button" parent="."]
